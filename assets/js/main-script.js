@@ -6,8 +6,8 @@ function mapPowRegData() {
 
     for (let i = 0, len = alcohol_percentages.length; i < len; i++) {
         dataToMap.push([
-            parseFloat(alcohol_percentages[i].value),
-            parseInt(raw_readings[i].value || 0),
+            parseFloat(raw_readings[i].value || 0),
+            parseFloat(alcohol_percentages[i].value)
         ])
     }
 
@@ -23,7 +23,7 @@ function calculateAlcoholPercentage(){
     let exponent = parseFloat(powReg.equation[1]);
     let alcohol_percentage = coefficient * (parseFloat(calculation_raw) ^ exponent);
 
-    calculation_result.innerHTML = alcohol_percentage;
+    calculation_result.innerHTML = alcohol_percentage.toFixed(2);
 
     console.log(alcohol_percentage);
 }
