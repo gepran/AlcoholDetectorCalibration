@@ -18,72 +18,78 @@
 
     <div class="container">
         <main>
-            <div class="py-5 text-center">
+            <div class="py-3 text-center">
                 <img class="d-block mx-auto mb-4" src="https://www.lunapic.com/editor/premade/transparent.gif" alt="" width="72" height="57">
                 <h2>Alcohol Detector Calibration</h2>
             </div>
 
             <div class="row g-3">
                 <div class="col-md-12 col-lg-12 order-md-last">
+                    <form class="card p-2 needs-validation" novalidate>
+                        <table class="table table-bordered table-sm m-0" id="adc-data-table">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th width="30%">Alcohol %</th>
+                                    <th width="70%">Raw Reading</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.10" required></td>
+                                    <td><input type="number" class="form-control raw-reading" placeholder="0.01" autofocus tabindex="1" required ></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.10" required></td>
+                                    <td><input type="number" class="form-control raw-reading" placeholder="0.01" tabindex="2" required ></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.25" required></td>
+                                    <td><input type="number" class="form-control raw-reading" placeholder="0.01" tabindex="3" required ></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.25" required></td>
+                                    <td><input type="number" class="form-control raw-reading" placeholder="0.01" tabindex="4" required ></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.50" required></td>
+                                    <td><input type="number" class="form-control raw-reading" placeholder="0.01" tabindex="5" required></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.50" required></td>
+                                    <td><input type="number" class="form-control raw-reading" placeholder="0.01" tabindex="6" required></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="1.00" required></td>
+                                    <td><input type="number" class="form-control raw-reading" placeholder="0.01" tabindex="7" required></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="1.00" required></td>
+                                    <td><input type="number" class="form-control raw-reading" placeholder="0.01" tabindex="8" required></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="2.00" required></td>
+                                    <td><input type="number" class="form-control raw-reading" placeholder="0.01" tabindex="9" required></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="2.00" required></td>
+                                    <td><input type="number" class="form-control raw-reading" placeholder="0.01" tabindex="10" required></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <table class="table table-bordered table-sm" id="adc-data-table">
-                        <thead class="table-dark">
-                            <tr>
-                                <th width="50%">Alcohol Percentage</th>
-                                <th width="50%">Raw Reading</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.10"></td>
-                                <td><input type="number" class="form-control raw-reading" placeholder="0.01"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.10"></td>
-                                <td><input type="number" class="form-control raw-reading" placeholder="0.01"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.25"></td>
-                                <td><input type="number" class="form-control raw-reading" placeholder="0.01"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.25"></td>
-                                <td><input type="number" class="form-control raw-reading" placeholder="0.01"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.50"></td>
-                                <td><input type="number" class="form-control raw-reading" placeholder="0.01"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="0.50"></td>
-                                <td><input type="number" class="form-control raw-reading" placeholder="0.01"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="1.00"></td>
-                                <td><input type="number" class="form-control raw-reading" placeholder="0.01"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="1.00"></td>
-                                <td><input type="number" class="form-control raw-reading" placeholder="0.01"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="2.00"></td>
-                                <td><input type="number" class="form-control raw-reading" placeholder="0.01"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" min="0" step="0.01" class="form-control alcohol-percentage" placeholder="%" value="2.00"></td>
-                                <td><input type="number" class="form-control raw-reading" placeholder="0.01"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    </form>
 
-                    <form class="card p-2">
+                    <form class="card p-2 my-2 needs-validation">
                         <div class="input-group">
-                            <input type="number" class="form-control" id="calculation-raw" placeholder="0.01">
-                            <button type="button" class="btn btn-secondary" onclick="calculateAlcoholPercentage()">CALCULATE</button>
+                            <input type="number" class="form-control" id="calculation-raw" placeholder="0.01" required >
+                            <button type="button" class="btn btn-success" id="calculation-btn" onclick="calculateAlcoholPercentage()">CALCULATE</button>
                         </div>
                     </form>
-                    <h1 id="calculation-result"></h1>
+
+                    <div class="card py-3 text-center">
+                        <h3 class="m-0"><span id="calculation-result"></span><span> %</span></h3>
+                    </div>
+
                 </div>
             </div>
         </main>
